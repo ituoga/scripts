@@ -1,6 +1,17 @@
 # Scripts PoC 
 
 
+## Why? 
+
+Imagine you have a system that is 20 years old, built on technologies that nobody wants to work with anymore. For instance, there's a need to enhance a CRM by adding new features, parsers, etc. This "proof of concept" system allows any program to be called over HTTP through MQ (nats.io), thereby enabling the transition of programming tasks from the "legacy system" to modern languages and contemporary technologies. 
+
+
+
+```
+curl -s --data "labas" -X POST localhost:8088/mq?t=bash.json  |jq
+```
+
+
 
 edit list.txt in format (add empty line at the end):
 ```
