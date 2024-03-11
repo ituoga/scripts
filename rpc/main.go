@@ -29,6 +29,9 @@ func main() {
 
 	_ = fi
 	// check if we have pipe over stdin
+	// if we are in pipeline - read stdin
+	// else - just skip because we dont get any input
+	// and program "hangs" ( waits for input )
 	if !(fi.Mode()&os.ModeNamedPipe == 0) {
 		b, _ := io.ReadAll(os.Stdin)
 		body = string(b)
