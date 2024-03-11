@@ -1,0 +1,10 @@
+  _rm_name:
+    build:
+      context: .
+      dockerfile: wrapper/Dockerfile
+    command: ["/app", "--stdin", "true", "--", "/scripts/_rm_script"]
+    environment:
+      - APP_LISTEN=_rm_topic
+    volumes:
+      - ./scripts:/scripts
+

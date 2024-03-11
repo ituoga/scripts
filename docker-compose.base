@@ -1,0 +1,15 @@
+services:
+  nats:
+    image: nats:latest
+    ports:
+      - "4333:4222"
+  
+  cmd: 
+    build:
+      context: .
+      dockerfile: rpc/Dockerfile
+    restart: "always"
+    entrypoint: ["/usr/bin/sleep"]
+    command: infinity
+
+

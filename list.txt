@@ -1,0 +1,5 @@
+spwd:topic:spwd.sh
+spwd1:vienas:spwd.sh
+serr:error:serr.sh
+hello:hello.world:hello.sh
+2ndpipe:pipe2:2ndpipe.sh
