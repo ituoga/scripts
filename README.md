@@ -30,10 +30,10 @@ got message: hello world
 
 and... pipelines:
 ```
-echo "input" | docker-compose exec -T cmd /app hello.world  | docker-compose exec -T cmd /app pipe2
+echo "input" | docker-compose exec -T cmd /app hello.world 2>&1 | docker-compose exec -T cmd /app pipe2
 ```
 
 should return something like:
 ```
-got message with 1st message: input
+got message with 1st message: got message: input
 ```
