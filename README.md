@@ -1,4 +1,5 @@
-# Scripts PoC
+# Scripts PoC 
+
 
 
 edit list.txt in format (add empty line at the end):
@@ -36,4 +37,10 @@ echo "input" | docker-compose exec -T cmd /app hello.world 2>&1 | docker-compose
 should return something like:
 ```
 got message with 1st message: got message: input
+```
+
+
+via http to nats proxy:
+```
+curl --data "hello my script" -X POST localhost:8088/mq?t=hello.world
 ```

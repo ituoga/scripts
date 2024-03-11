@@ -1,4 +1,5 @@
   _rm_name:
+    image: local/wrapper:latest
     build:
       context: .
       dockerfile: wrapper/Dockerfile

@@ -4,7 +4,17 @@ services:
     ports:
       - "4333:4222"
   
+  gateway: 
+    container_name: gateway
+    image: local/gw:latest
+    build:
+      context: .
+      dockerfile: gw/Dockerfile
+    ports:
+      - "8088:80"
+
   cmd: 
+    image: local/rpc:latest
     build:
       context: .
       dockerfile: rpc/Dockerfile
