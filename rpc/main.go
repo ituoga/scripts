@@ -44,7 +44,5 @@ func main() {
 		return
 	}
 	println(string(msg.Data))
-	// os.Stdin.Close()
-	// os.Stdout.Close()
-	// os.Stderr.Close()
+
 }
