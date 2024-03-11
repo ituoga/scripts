@@ -1,16 +1,21 @@
-# Scripts PoC 
+# Scripts PoC  - Moving from legacy system to new legacy
 
+## Working on Legacy Systems
 
-## Why? 
+Sometimes we need somthing very simple
+
+### Why? 
 
 Imagine you have a system that is 20 years old, built on technologies that nobody wants to work with anymore. For instance, there's a need to enhance a CRM by adding new features, parsers, etc. This "proof of concept" system allows any program to be called over HTTP through MQ (nats.io), thereby enabling the transition of programming tasks from the "legacy system" to modern languages and contemporary technologies. 
 
+### Simple example
 
-
+Get JSON from `bash.json` subcriber
 ```
-curl -s --data "labas" -X POST localhost:8088/mq?t=bash.json  |jq
+curl -X GET -s localhost:8088/mq?t=bash.json  |jq
 ```
 
+### How to start
 
 
 edit list.txt in format (add empty line at the end):
@@ -39,6 +44,8 @@ should return something like:
 ```
 got message: hello world
 ```
+
+### other
 
 and... pipelines:
 ```
